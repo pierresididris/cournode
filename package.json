@@ -1,0 +1,23 @@
+{
+  "name": "cournode",
+  "version": "1.0.0",
+  "description": "cour Node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierresididris/cournode.git"
+  },
+  "author": "Pierre Sid-idris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pierresididris/cournode/issues"
+  },
+  "homepage": "https://github.com/pierresididris/cournode#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
