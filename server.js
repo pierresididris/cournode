@@ -6,14 +6,11 @@ app.get('/', function (req, res) {
 })
 
 app.get('/hello', function (req, res) {
-	if(req.query.nom==null){
-		res.send('Quel est votre nom !')
+	if(req.query.nom){
+		res.send(`Bonjour ${req.query.nom} !`)
+	}else{
+		res.send('Quel est votre nom !')	
 	}
-	else {
-		res.send('Bonjour ' + req.query.nom + ' !')
-	}
-
-
 })
 
 app.listen(process.env.PORT || 3000, function () {
