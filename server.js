@@ -1,1 +1,1 @@
-alter('hello, world');
+console.log("hello, world");
