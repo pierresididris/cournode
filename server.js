@@ -1,7 +1,8 @@
 const express = require('express')
-const app = express()
 const bodyParser = require('body-parser');
-app.use(bodyParser);
+
+const app = express()
+app.use(bodyParser.json());// accept json data in POST requests
 
 app.get('/', function (req, res) {
 	  res.send('Hello World!')
@@ -16,7 +17,15 @@ app.get('/hello', function (req, res) {
 })
 
 app.post('/chat', function (req, res) {
-	res.send(` ${req.body} `)
+	const msg = req.body.msg
+	console.log('chat message', msg)
+	if (msg === 'ville') {
+		res.send('Nous somme à Paris')
+	} else if (msg === 'météo') {
+		res.send('Il fait beau')
+	} else {
+		res.send(`TODO`)
+	}
 })
 
 app.listen(process.env.PORT || 3000, function () {
